@@ -9,7 +9,7 @@
           </ul>
           <el-form :model="loginForm">
               <el-form-item v-for="item in formItems" :key="item.index" class="form-item">
-                  <label>{{item.label}}</label>
+                  <label class="form-item-label">{{item.label}}</label>
                   <el-input :type="item.type" v-model="loginForm[item.attr]"></el-input>
               </el-form-item>
               <el-form-item>
@@ -102,16 +102,16 @@ export default {
         background: rgba(0,0,0,0.1);
     }
 }
+.form-item-label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: small-font-size;
+    color: white;
+}
 .login-form {
     margin-top: 29px;
     .form-item {
         margin-bottom: 13px;
-        label {
-            display: block;
-            margin-bottom: 3px;
-            font-size: small-font-size;
-            color: white;
-        }
     }
     .item-btn {
         display: block;
